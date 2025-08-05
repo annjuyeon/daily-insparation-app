@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration - Good Sentence Every Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-quote-left"></i>
+                Daily Inspiration
+                <i class="fas fa-quote-right"></i>
+            </h1>
+            <p class="subtitle">A good sentence to brighten your day</p>
+        </header>
+
+        <main class="main-content">
+            <div class="sentence-card">
+                <div class="sentence-content">
+                    <p id="daily-sentence" class="sentence-text">
+                        Loading your daily inspiration...
+                    </p>
+                    <p id="sentence-author" class="sentence-author"></p>
+                </div>
+                
+                <div class="card-actions">
+                    <button id="new-sentence-btn" class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i>
+                        New Sentence
+                    </button>
+                    <button id="share-btn" class="btn btn-secondary">
+                        <i class="fas fa-share"></i>
+                        Share
+                    </button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Today's Date</h3>
+                    <p id="current-date"></p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Next Update</h3>
+                    <p id="next-update"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Daily Inspiration. Made with <i class="fas fa-heart"></i> for you.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

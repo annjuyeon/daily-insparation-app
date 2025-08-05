@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.title i {
+    color: #ffd700;
+    margin: 0 10px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sentence-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sentence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.sentence-content {
+    margin-bottom: 30px;
+}
+
+.sentence-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.sentence-author {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-weight: 400;
+}
+
+.sentence-author::before {
+    content: "— ";
+    color: #95a5a6;
+}
+
+.card-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.btn-secondary:hover {
+    background: #d5dbdb;
+    transform: translateY(-2px);
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.info-card h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.info-card h3 i {
+    color: #667eea;
+}
+
+.info-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    opacity: 0.8;
+}
+
+.footer i {
+    color: #e74c3c;
+    animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .title i {
+        font-size: 1.5rem;
+    }
+    
+    .sentence-card {
+        padding: 30px 20px;
+    }
+    
+    .sentence-text {
+        font-size: 1.3rem;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .sentence-text {
+        font-size: 1.2rem;
+    }
+    
+    .sentence-card {
+        padding: 25px 15px;
+    }
+} 
